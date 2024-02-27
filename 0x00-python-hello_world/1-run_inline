@@ -1,2 +1,2 @@
 #!/bin/bash
-python - c "print('Best School: {}'.format(88+10))"
+python3 - c "$PYCODE"
