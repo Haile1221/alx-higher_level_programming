@@ -1,18 +1,16 @@
 #!/usr/bin/python3
 import random
-
 number = random.randint(-10000, 10000)
-
-# Output the random number
-print("Last digit of", number, "is", end=' ')
-
-# Get the last digit of the number
-last_digit = abs(number) % 10
-
-# Determine the conditions based on the last digit
-if last_digit > 5:
-    print(last_digit, "and is greater than 5")
-elif last_digit == 0:
-    print(last_digit, "and is 0")
+if number >= 0:
+    last_digit = number % 10
 else:
-    print(last_digit, "and is less than 6 and not 0")
+    last_digit = ((number * -1) % 10) * -1
+
+message = "Last digit of %d is %d and is" % (number, last_digit)
+
+if last_digit == 0:
+    print(message, "0")
+elif last_digit > 5:
+    print(message, "greater than 5")
+else:
+    print(message, "less than 6 and not 0")
